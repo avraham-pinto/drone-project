@@ -1,0 +1,36 @@
+.button-group {
+    display: flex;
+  }
+  
+  .buttons {
+    border: none;
+    background-color: whitesmoke ;
+    color:  black ;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    width: 5.8rem;
+  }
+  
+  .buttons.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    animation: slide 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: scaleX(0);
+    }
+    100% {
+      transform: scaleX(1);
+    }
+  }
+  
